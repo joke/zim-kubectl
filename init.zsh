@@ -1,8 +1,8 @@
-if (( ! ${+commands[starship]} )); then
+if (( ! ${+commands[kubectl]} )); then
   return 1
 fi
 
-if [[ ! -e ${0:h}/starship.zsh || ${0:h}/starship.zsh -ot ${commands[starship]} ]]; then
-  starship init zsh --print-full-init >| ${0:h}/starship.zsh
+if [[ ! -e ${0:h}/kubectl.zsh || ${0:h}/kubectl.zsh -ot ${commands[kubectl]} ]]; then
+  kubectl completion zsh >| ${0:h}/kubectl.zsh
 fi
-source ${0:h}/starship.zsh
+source ${0:h}/kubectl.zsh
