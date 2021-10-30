@@ -6,7 +6,7 @@ https://github.com/zimfw/zimfw[zim module] for https://kubernetes.io/docs/refere
 
 [%header,cols="s,m,l"]
 |===
-|Command Group
+|Command/Resource Group
 |Alias
 |Command
 
@@ -193,11 +193,6 @@ https://github.com/zimfw/zimfw[zim module] for https://kubernetes.io/docs/refere
 |
 |ktpol
 |kubectl top pod -l
-
-
-
-
-
 
 |all: `a`
 |kda
