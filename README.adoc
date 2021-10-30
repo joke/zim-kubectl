@@ -4,818 +4,1095 @@ https://github.com/zimfw/zimfw[zim module] for https://kubernetes.io/docs/refere
 
 == Aliases
 
+[%header,cols="s,m,l"]
 |===
+|Command Group
 |Alias
 |Command
 
-|`k`
-|`kubectl`
+|
+|k
+|kubectl
+
+|get
+|kg
+|kubectl get
+
+|
+|kgf
+|kubectl get -f
+
+|
+|kgk
+|kubectl get -k
+
+|
+|kgl
+|kubectl get -l
+
+|
+|kgw
+|kubectl get -o wide
+
+|
+|kgwa
+|kubectl get --watch
+
+|
+|kgy
+|kubectl get -o yaml
+
+|edit
+|ke
+|kubectl edit
+
+|
+|kef
+|kubectl edit -f
+
+|
+|kek
+|kubectl edit -k
+
+|
+|kel
+|kubectl edit -l
+
+|delete
+|kdel
+|kubectl delete
+
+|
+|kdelf
+|kubectl delete -f
+
+|
+|kdelk
+|kubectl delete -k
+
+|
+|kdell
+|kubectl delete -l
+
+|describe
+|kd
+|kubectl describe
+
+|
+|kdk
+|kubectl describe -k
+
+|
+|kdl
+|kubectl describe -f
+
+|
+|kdl
+|kubectl describe -l
+
+|config
+|kccc
+|kubectl config current-context
+
+|
+|kcdc
+|kubectl config delete-context
 
-|`kg`
-|`kubectl get`
+|
+|kcgc
+|kubectl config get-contexts
 
-|`kgf`
-|`kubectl get -f`
+|
+|kcsc
+|kubectl config set-context
 
-|`kgk`
-|`kubectl get -k`
+|
+|kcscn
+|kubectl config set-context --current --namespace
 
-|`kgl`
-|`kubectl get -l`
+|
+|kcuc
+|kubectl config use-context
 
-|`kgw`
-|`kubectl get -o wide`
+|label
+|kla
+|kubectl label
 
-|`kgwa`
-|`kubectl get --watch`
+|
+|klal
+|kubectl label -l
 
-|`kgy`
-|`kubectl get -o yaml`
+|annotate
+|kan
+|kubectl annotate
 
-|`ke`
-|`kubectl edit`
+|
+|kanl
+|kubectl annotate -l
 
-|`kef`
-|`kubectl edit -f`
+|apply
+|kaf
+|kubectl apply -f
 
-|`kek`
-|`kubectl edit -k`
+|
+|kak
+|kubectl apply -k
 
-|`kel`
-|`kubectl edit -l`
+|logs
+|kl
+|kubectl logs
 
-|`kdel`
-|`kubectl delete`
+|
+|kl1h
+|kubectl logs --since 1h
 
-|`kdelf`
-|`kubectl delete -f`
+|
+|kl1m
+|kubectl logs --since 1m
 
-|`kdelk`
-|`kubectl delete -k`
+|
+|kl1s
+|kubectl logs --since 1s
 
-|`kdell`
-|`kubectl delete -l`
+|
+|klf
+|kubectl logs -f
 
-|`kd`
-|`kubectl describe`
+|
+|klf1h
+|kubectl logs --since 1h -f
 
-|`kdk`
-|`kubectl describe -k`
+|
+|klf1m
+|kubectl logs --since 1m -f
 
-|`kdl`
-|`kubectl describe -f`
+|
+|klf1s
+|kubectl logs --since 1s -f
 
-|`kdl`
-|`kubectl describe -l`
+|exec
+|keti
+|kubectl exec -t -i
 
-|`kccc`
-|`kubectl config current-context`
+|port-forward
+|kpf
+|kubectl port-forward
 
-|`kcdc`
-|`kubectl config delete-context`
+|top
+|ktno
+|kubectl top node
 
-|`kcgc`
-|`kubectl config get-contexts`
+|
+|ktnol
+|kubectl top node -l
 
-|`kcsc`
-|`kubectl config set-context`
+|
+|ktpo
+|kubectl top pod
 
-|`kcscn`
-|`kubectl config set-context --current --namespace`
+|
+|ktpol
+|kubectl top pod -l
 
-|`kcuc`
-|`kubectl config use-context`
 
-|`kla`
-|`kubectl label`
 
-|`klal`
-|`kubectl label -l`
 
-|`kan`
-|`kubectl annotate`
 
-|`kanl`
-|`kubectl annotate -l`
 
-|`kaf`
-|`kubectl apply -f`
+|all: `a`
+|kda
+|kubectl describe all
 
-|`kak`
-|`kubectl apply -k`
+|
+|kga
+|kubectl get all
 
-|`kl`
-|`kubectl logs`
+|
+|kgal
+|kubectl get all -l
 
-|`kl1h`
-|`kubectl logs --since 1h`
+|
+|kgaw
+|kubectl get all -o wide
 
-|`kl1m`
-|`kubectl logs --since 1m`
+|
+|kgawa
+|kubectl get all --watch
 
-|`kl1s`
-|`kubectl logs --since 1s`
+|
+|kgay
+|kubectl get all -o yaml
 
-|`klf`
-|`kubectl logs -f`
+|
+|kea
+|kubectl edit all
 
-|`klf1h`
-|`kubectl logs --since 1h -f`
+|
+|keal
+|kubectl edit all -l
 
-|`klf1m`
-|`kubectl logs --since 1m -f`
+|
+|kdela
+|kubectl delete all
 
-|`klf1s`
-|`kubectl logs --since 1s -f`
+|configmap: `cm`
+|kdcm
+|kubectl describe configmap
 
-|`keti`
-|`kubectl exec -t -i`
+|
+|kgcm
+|kubectl get configmap
 
-|`kpf`
-|`kubectl port-forward`
+|
+|kgcml
+|kubectl get configmap -l
 
-|`ktno`
-|`kubectl top node`
+|
+|kgcmw
+|kubectl get configmap -o wide
 
-|`ktnol`
-|`kubectl top node -l`
+|
+|kgcmwa
+|kubectl get configmap --watch
 
-|`ktpo`
-|`kubectl top pod`
+|
+|kgcmy
+|kubectl get configmap -o yaml
 
-|`ktpol`
-|`kubectl top pod -l`
+|
+|kecm
+|kubectl edit configmap
 
-|`kdrs`
-|`kubectl describe replicaset`
+|
+|kecml
+|kubectl edit configmap -l
 
-|`kgrs`
-|`kubectl get replicaset`
+|
+|kdelcm
+|kubectl delete configmap
 
-|`kgrsl`
-|`kubectl get replicaset -l`
+|cronjob: `cj`
+|kdcj
+|kubectl describe cronjob
 
-|`kgrsw`
-|`kubectl get replicaset -o wide`
+|
+|kgcj
+|kubectl get cronjob
 
-|`kgrswa`
-|`kubectl get replicaset --watch`
+|
+|kgcjl
+|kubectl get cronjob -l
 
-|`kgrsy`
-|`kubectl get replicaset -o yaml`
+|
+|kgcjw
+|kubectl get cronjob -o wide
 
-|`kers`
-|`kubectl edit replicaset`
+|
+|kgcjwa
+|kubectl get cronjob --watch
 
-|`kersl`
-|`kubectl edit replicaset -l`
+|
+|kgcjy
+|kubectl get cronjob -o yaml
 
-|`kdelrs`
-|`kubectl delete replicaset`
+|
+|kecj
+|kubectl edit cronjob
 
-|`kdno`
-|`kubectl describe node`
+|
+|kecjl
+|kubectl edit cronjob -l
 
-|`kgno`
-|`kubectl get node`
+|
+|kdelcj
+|kubectl delete cronjob
 
-|`kgnol`
-|`kubectl get node -l`
+|daemonset: `ds`
+|kdds
+|kubectl describe daemonset
 
-|`kgnow`
-|`kubectl get node -o wide`
+|
+|kgds
+|kubectl get daemonset
 
-|`kgnowa`
-|`kubectl get node --watch`
+|
+|kgdsl
+|kubectl get daemonset -l
 
-|`kgnoy`
-|`kubectl get node -o yaml`
+|
+|kgdsw
+|kubectl get daemonset -o wide
 
-|`keno`
-|`kubectl edit node`
+|
+|kgdswa
+|kubectl get daemonset --watch
 
-|`kenol`
-|`kubectl edit node -l`
+|
+|kgdsy
+|kubectl get daemonset -o yaml
 
-|`kdelno`
-|`kubectl delete node`
+|
+|keds
+|kubectl edit daemonset
 
-|`kdrc`
-|`kubectl describe replicationcontroller`
+|
+|kedsl
+|kubectl edit daemonset -l
 
-|`kgrc`
-|`kubectl get replicationcontroller`
+|
+|kdelds
+|kubectl delete daemonset
 
-|`kgrcl`
-|`kubectl get replicationcontroller -l`
+|deployment: `dep`
+|kddep
+|kubectl describe deployment
 
-|`kgrcw`
-|`kubectl get replicationcontroller -o wide`
+|
+|kgdep
+|kubectl get deployment
 
-|`kgrcwa`
-|`kubectl get replicationcontroller --watch`
+|
+|kgdepl
+|kubectl get deployment -l
 
-|`kgrcy`
-|`kubectl get replicationcontroller -o yaml`
+|
+|kgdepw
+|kubectl get deployment -o wide
 
-|`kerc`
-|`kubectl edit replicationcontroller`
+|
+|kgdepwa
+|kubectl get deployment --watch
 
-|`kercl`
-|`kubectl edit replicationcontroller -l`
+|
+|kgdepy
+|kubectl get deployment -o yaml
 
-|`kdelrc`
-|`kubectl delete replicationcontroller`
+|
+|kedep
+|kubectl edit deployment
 
-|`kdj`
-|`kubectl describe job`
+|
+|kedepl
+|kubectl edit deployment -l
 
-|`kgj`
-|`kubectl get job`
+|
+|kdeldep
+|kubectl delete deployment
 
-|`kgjl`
-|`kubectl get job -l`
+|deployment: `deploy`
+|kddeploy
+|kubectl describe deployment
 
-|`kgjw`
-|`kubectl get job -o wide`
+|
+|kgdeploy
+|kubectl get deployment
 
-|`kgjwa`
-|`kubectl get job --watch`
+|
+|kgdeployl
+|kubectl get deployment -l
 
-|`kgjy`
-|`kubectl get job -o yaml`
+|
+|kgdeployw
+|kubectl get deployment -o wide
 
-|`kej`
-|`kubectl edit job`
+|
+|kgdeploywa
+|kubectl get deployment --watch
 
-|`kejl`
-|`kubectl edit job -l`
+|
+|kgdeployy
+|kubectl get deployment -o yaml
 
-|`kdelj`
-|`kubectl delete job`
+|
+|kedeploy
+|kubectl edit deployment
 
-|`kdhpa`
-|`kubectl describe horizontalpodautoscaler`
+|
+|kedeployl
+|kubectl edit deployment -l
 
-|`kghpa`
-|`kubectl get horizontalpodautoscaler`
+|
+|kdeldeploy
+|kubectl delete deployment
 
-|`kghpal`
-|`kubectl get horizontalpodautoscaler -l`
+|horizontalpodautoscaler: `hpa`
+|kdhpa
+|kubectl describe horizontalpodautoscaler
 
-|`kghpaw`
-|`kubectl get horizontalpodautoscaler -o wide`
+|
+|kghpa
+|kubectl get horizontalpodautoscaler
 
-|`kghpawa`
-|`kubectl get horizontalpodautoscaler --watch`
+|
+|kghpal
+|kubectl get horizontalpodautoscaler -l
 
-|`kghpay`
-|`kubectl get horizontalpodautoscaler -o yaml`
+|
+|kghpaw
+|kubectl get horizontalpodautoscaler -o wide
 
-|`kehpa`
-|`kubectl edit horizontalpodautoscaler`
+|
+|kghpawa
+|kubectl get horizontalpodautoscaler --watch
 
-|`kehpal`
-|`kubectl edit horizontalpodautoscaler -l`
+|
+|kghpay
+|kubectl get horizontalpodautoscaler -o yaml
 
-|`kdelhpa`
-|`kubectl delete horizontalpodautoscaler`
+|
+|kehpa
+|kubectl edit horizontalpodautoscaler
 
-|`kdns`
-|`kubectl describe namespace`
+|
+|kehpal
+|kubectl edit horizontalpodautoscaler -l
 
-|`kgns`
-|`kubectl get namespace`
+|
+|kdelhpa
+|kubectl delete horizontalpodautoscaler
 
-|`kgnsl`
-|`kubectl get namespace -l`
+|ingress: `ing`
+|kding
+|kubectl describe ingress
 
-|`kgnsw`
-|`kubectl get namespace -o wide`
+|
+|kging
+|kubectl get ingress
 
-|`kgnswa`
-|`kubectl get namespace --watch`
+|
+|kgingl
+|kubectl get ingress -l
 
-|`kgnsy`
-|`kubectl get namespace -o yaml`
+|
+|kgingw
+|kubectl get ingress -o wide
 
-|`kens`
-|`kubectl edit namespace`
+|
+|kgingwa
+|kubectl get ingress --watch
 
-|`kensl`
-|`kubectl edit namespace -l`
+|
+|kgingy
+|kubectl get ingress -o yaml
 
-|`kdelns`
-|`kubectl delete namespace`
+|
+|keing
+|kubectl edit ingress
 
-|`kdpv`
-|`kubectl describe persistentvolume`
+|
+|keingl
+|kubectl edit ingress -l
 
-|`kgpv`
-|`kubectl get persistentvolume`
+|
+|kdeling
+|kubectl delete ingress
 
-|`kgpvl`
-|`kubectl get persistentvolume -l`
+|job: `j`
+|kdj
+|kubectl describe job
 
-|`kgpvw`
-|`kubectl get persistentvolume -o wide`
+|
+|kgj
+|kubectl get job
 
-|`kgpvwa`
-|`kubectl get persistentvolume --watch`
+|
+|kgjl
+|kubectl get job -l
 
-|`kgpvy`
-|`kubectl get persistentvolume -o yaml`
+|
+|kgjw
+|kubectl get job -o wide
 
-|`kepv`
-|`kubectl edit persistentvolume`
+|
+|kgjwa
+|kubectl get job --watch
 
-|`kepvl`
-|`kubectl edit persistentvolume -l`
+|
+|kgjy
+|kubectl get job -o yaml
 
-|`kdelpv`
-|`kubectl delete persistentvolume`
+|
+|kej
+|kubectl edit job
 
-|`kddeploy`
-|`kubectl describe deployment`
+|
+|kejl
+|kubectl edit job -l
 
-|`kgdeploy`
-|`kubectl get deployment`
+|
+|kdelj
+|kubectl delete job
 
-|`kgdeployl`
-|`kubectl get deployment -l`
+|namespace: `ns`
+|kdns
+|kubectl describe namespace
 
-|`kgdeployw`
-|`kubectl get deployment -o wide`
+|
+|kgns
+|kubectl get namespace
 
-|`kgdeploywa`
-|`kubectl get deployment --watch`
+|
+|kgnsl
+|kubectl get namespace -l
 
-|`kgdeployy`
-|`kubectl get deployment -o yaml`
+|
+|kgnsw
+|kubectl get namespace -o wide
 
-|`kedeploy`
-|`kubectl edit deployment`
+|
+|kgnswa
+|kubectl get namespace --watch
 
-|`kedeployl`
-|`kubectl edit deployment -l`
+|
+|kgnsy
+|kubectl get namespace -o yaml
 
-|`kdeldeploy`
-|`kubectl delete deployment`
+|
+|kens
+|kubectl edit namespace
 
-|`kdcj`
-|`kubectl describe cronjob`
+|
+|kensl
+|kubectl edit namespace -l
 
-|`kgcj`
-|`kubectl get cronjob`
+|
+|kdelns
+|kubectl delete namespace
 
-|`kgcjl`
-|`kubectl get cronjob -l`
+|node: `no`
+|kdno
+|kubectl describe node
 
-|`kgcjw`
-|`kubectl get cronjob -o wide`
+|
+|kgno
+|kubectl get node
 
-|`kgcjwa`
-|`kubectl get cronjob --watch`
+|
+|kgnol
+|kubectl get node -l
 
-|`kgcjy`
-|`kubectl get cronjob -o yaml`
+|
+|kgnow
+|kubectl get node -o wide
 
-|`kecj`
-|`kubectl edit cronjob`
+|
+|kgnowa
+|kubectl get node --watch
 
-|`kecjl`
-|`kubectl edit cronjob -l`
+|
+|kgnoy
+|kubectl get node -o yaml
 
-|`kdelcj`
-|`kubectl delete cronjob`
+|
+|keno
+|kubectl edit node
 
-|`kdpvc`
-|`kubectl describe persistentvolumeclaim`
+|
+|kenol
+|kubectl edit node -l
 
-|`kgpvc`
-|`kubectl get persistentvolumeclaim`
+|
+|kdelno
+|kubectl delete node
 
-|`kgpvcl`
-|`kubectl get persistentvolumeclaim -l`
+|poddisruptionbudget: `pdb`
+|kdpdb
+|kubectl describe poddisruptionbudget
 
-|`kgpvcw`
-|`kubectl get persistentvolumeclaim -o wide`
+|
+|kgpdb
+|kubectl get poddisruptionbudget
 
-|`kgpvcwa`
-|`kubectl get persistentvolumeclaim --watch`
+|
+|kgpdbl
+|kubectl get poddisruptionbudget -l
 
-|`kgpvcy`
-|`kubectl get persistentvolumeclaim -o yaml`
+|
+|kgpdbw
+|kubectl get poddisruptionbudget -o wide
 
-|`kepvc`
-|`kubectl edit persistentvolumeclaim`
+|
+|kgpdbwa
+|kubectl get poddisruptionbudget --watch
 
-|`kepvcl`
-|`kubectl edit persistentvolumeclaim -l`
+|
+|kgpdby
+|kubectl get poddisruptionbudget -o yaml
 
-|`kdelpvc`
-|`kubectl delete persistentvolumeclaim`
+|
+|kepdb
+|kubectl edit poddisruptionbudget
 
-|`kdpdb`
-|`kubectl describe poddisruptionbudget`
+|
+|kepdbl
+|kubectl edit poddisruptionbudget -l
 
-|`kgpdb`
-|`kubectl get poddisruptionbudget`
+|
+|kdelpdb
+|kubectl delete poddisruptionbudget
 
-|`kgpdbl`
-|`kubectl get poddisruptionbudget -l`
+|pod: `po`
+|kdpo
+|kubectl describe pod
 
-|`kgpdbw`
-|`kubectl get poddisruptionbudget -o wide`
+|
+|kgpo
+|kubectl get pod
 
-|`kgpdbwa`
-|`kubectl get poddisruptionbudget --watch`
+|
+|kgpol
+|kubectl get pod -l
 
-|`kgpdby`
-|`kubectl get poddisruptionbudget -o yaml`
+|
+|kgpow
+|kubectl get pod -o wide
 
-|`kepdb`
-|`kubectl edit poddisruptionbudget`
+|
+|kgpowa
+|kubectl get pod --watch
 
-|`kepdbl`
-|`kubectl edit poddisruptionbudget -l`
+|
+|kgpoy
+|kubectl get pod -o yaml
 
-|`kdelpdb`
-|`kubectl delete poddisruptionbudget`
+|
+|kepo
+|kubectl edit pod
 
-|`kddep`
-|`kubectl describe deployment`
+|
+|kepol
+|kubectl edit pod -l
 
-|`kgdep`
-|`kubectl get deployment`
+|
+|kdelpo
+|kubectl delete pod
 
-|`kgdepl`
-|`kubectl get deployment -l`
+|persistentvolume: `pv`
+|kdpv
+|kubectl describe persistentvolume
 
-|`kgdepw`
-|`kubectl get deployment -o wide`
+|
+|kgpv
+|kubectl get persistentvolume
 
-|`kgdepwa`
-|`kubectl get deployment --watch`
+|
+|kgpvl
+|kubectl get persistentvolume -l
 
-|`kgdepy`
-|`kubectl get deployment -o yaml`
+|
+|kgpvw
+|kubectl get persistentvolume -o wide
 
-|`kedep`
-|`kubectl edit deployment`
+|
+|kgpvwa
+|kubectl get persistentvolume --watch
 
-|`kedepl`
-|`kubectl edit deployment -l`
+|
+|kgpvy
+|kubectl get persistentvolume -o yaml
 
-|`kdeldep`
-|`kubectl delete deployment`
+|
+|kepv
+|kubectl edit persistentvolume
 
-|`kdcm`
-|`kubectl describe configmap`
+|
+|kepvl
+|kubectl edit persistentvolume -l
 
-|`kgcm`
-|`kubectl get configmap`
+|
+|kdelpv
+|kubectl delete persistentvolume
 
-|`kgcml`
-|`kubectl get configmap -l`
+|persistentvolumeclaim: `pvc`
+|kdpvc
+|kubectl describe persistentvolumeclaim
 
-|`kgcmw`
-|`kubectl get configmap -o wide`
+|
+|kgpvc
+|kubectl get persistentvolumeclaim
 
-|`kgcmwa`
-|`kubectl get configmap --watch`
+|
+|kgpvcl
+|kubectl get persistentvolumeclaim -l
 
-|`kgcmy`
-|`kubectl get configmap -o yaml`
+|
+|kgpvcw
+|kubectl get persistentvolumeclaim -o wide
 
-|`kecm`
-|`kubectl edit configmap`
+|
+|kgpvcwa
+|kubectl get persistentvolumeclaim --watch
 
-|`kecml`
-|`kubectl edit configmap -l`
+|
+|kgpvcy
+|kubectl get persistentvolumeclaim -o yaml
 
-|`kdelcm`
-|`kubectl delete configmap`
+|
+|kepvc
+|kubectl edit persistentvolumeclaim
 
-|`kdsec`
-|`kubectl describe secret`
+|
+|kepvcl
+|kubectl edit persistentvolumeclaim -l
 
-|`kgsec`
-|`kubectl get secret`
+|
+|kdelpvc
+|kubectl delete persistentvolumeclaim
 
-|`kgsecl`
-|`kubectl get secret -l`
+|replicationcontroller: `rc`
+|kdrc
+|kubectl describe replicationcontroller
 
-|`kgsecw`
-|`kubectl get secret -o wide`
+|
+|kgrc
+|kubectl get replicationcontroller
 
-|`kgsecwa`
-|`kubectl get secret --watch`
+|
+|kgrcl
+|kubectl get replicationcontroller -l
 
-|`kgsecy`
-|`kubectl get secret -o yaml`
+|
+|kgrcw
+|kubectl get replicationcontroller -o wide
 
-|`kesec`
-|`kubectl edit secret`
+|
+|kgrcwa
+|kubectl get replicationcontroller --watch
 
-|`kesecl`
-|`kubectl edit secret -l`
+|
+|kgrcy
+|kubectl get replicationcontroller -o yaml
 
-|`kdelsec`
-|`kubectl delete secret`
+|
+|kerc
+|kubectl edit replicationcontroller
 
-|`kdsvc`
-|`kubectl describe service`
+|
+|kercl
+|kubectl edit replicationcontroller -l
 
-|`kgsvc`
-|`kubectl get service`
+|
+|kdelrc
+|kubectl delete replicationcontroller
 
-|`kgsvcl`
-|`kubectl get service -l`
+|replicaset: `rs`
+|kdrs
+|kubectl describe replicaset
 
-|`kgsvcw`
-|`kubectl get service -o wide`
+|
+|kgrs
+|kubectl get replicaset
 
-|`kgsvcwa`
-|`kubectl get service --watch`
+|
+|kgrsl
+|kubectl get replicaset -l
 
-|`kgsvcy`
-|`kubectl get service -o yaml`
+|
+|kgrsw
+|kubectl get replicaset -o wide
 
-|`kesvc`
-|`kubectl edit service`
+|
+|kgrswa
+|kubectl get replicaset --watch
 
-|`kesvcl`
-|`kubectl edit service -l`
+|
+|kgrsy
+|kubectl get replicaset -o yaml
 
-|`kdelsvc`
-|`kubectl delete service`
+|
+|kers
+|kubectl edit replicaset
 
-|`kdsts`
-|`kubectl describe statefulset`
+|
+|kersl
+|kubectl edit replicaset -l
 
-|`kgsts`
-|`kubectl get statefulset`
+|
+|kdelrs
+|kubectl delete replicaset
 
-|`kgstsl`
-|`kubectl get statefulset -l`
+|serviceaccount: `sa`
+|kdsa
+|kubectl describe serviceaccount
 
-|`kgstsw`
-|`kubectl get statefulset -o wide`
+|
+|kgsa
+|kubectl get serviceaccount
 
-|`kgstswa`
-|`kubectl get statefulset --watch`
+|
+|kgsal
+|kubectl get serviceaccount -l
 
-|`kgstsy`
-|`kubectl get statefulset -o yaml`
+|
+|kgsaw
+|kubectl get serviceaccount -o wide
 
-|`kests`
-|`kubectl edit statefulset`
+|
+|kgsawa
+|kubectl get serviceaccount --watch
 
-|`kestsl`
-|`kubectl edit statefulset -l`
+|
+|kgsay
+|kubectl get serviceaccount -o yaml
 
-|`kdelsts`
-|`kubectl delete statefulset`
+|
+|kesa
+|kubectl edit serviceaccount
 
-|`kda`
-|`kubectl describe all`
+|
+|kesal
+|kubectl edit serviceaccount -l
 
-|`kga`
-|`kubectl get all`
+|
+|kdelsa
+|kubectl delete serviceaccount
 
-|`kgal`
-|`kubectl get all -l`
+|secret: `sec`
+|kdsec
+|kubectl describe secret
 
-|`kgaw`
-|`kubectl get all -o wide`
+|
+|kgsec
+|kubectl get secret
 
-|`kgawa`
-|`kubectl get all --watch`
+|
+|kgsecl
+|kubectl get secret -l
 
-|`kgay`
-|`kubectl get all -o yaml`
+|
+|kgsecw
+|kubectl get secret -o wide
 
-|`kea`
-|`kubectl edit all`
+|
+|kgsecwa
+|kubectl get secret --watch
 
-|`keal`
-|`kubectl edit all -l`
+|
+|kgsecy
+|kubectl get secret -o yaml
 
-|`kdela`
-|`kubectl delete all`
+|
+|kesec
+|kubectl edit secret
 
-|`kding`
-|`kubectl describe ingress`
+|
+|kesecl
+|kubectl edit secret -l
 
-|`kging`
-|`kubectl get ingress`
+|
+|kdelsec
+|kubectl delete secret
 
-|`kgingl`
-|`kubectl get ingress -l`
+|statefulset: `sts`
+|kdsts
+|kubectl describe statefulset
 
-|`kgingw`
-|`kubectl get ingress -o wide`
+|
+|kgsts
+|kubectl get statefulset
 
-|`kgingwa`
-|`kubectl get ingress --watch`
+|
+|kgstsl
+|kubectl get statefulset -l
 
-|`kgingy`
-|`kubectl get ingress -o yaml`
+|
+|kgstsw
+|kubectl get statefulset -o wide
 
-|`keing`
-|`kubectl edit ingress`
+|
+|kgstswa
+|kubectl get statefulset --watch
 
-|`keingl`
-|`kubectl edit ingress -l`
+|
+|kgstsy
+|kubectl get statefulset -o yaml
 
-|`kdeling`
-|`kubectl delete ingress`
+|
+|kests
+|kubectl edit statefulset
 
-|`kdds`
-|`kubectl describe daemonset`
+|
+|kestsl
+|kubectl edit statefulset -l
 
-|`kgds`
-|`kubectl get daemonset`
+|
+|kdelsts
+|kubectl delete statefulset
 
-|`kgdsl`
-|`kubectl get daemonset -l`
+|service: `svc`
+|kdsvc
+|kubectl describe service
 
-|`kgdsw`
-|`kubectl get daemonset -o wide`
+|
+|kgsvc
+|kubectl get service
 
-|`kgdswa`
-|`kubectl get daemonset --watch`
+|
+|kgsvcl
+|kubectl get service -l
 
-|`kgdsy`
-|`kubectl get daemonset -o yaml`
+|
+|kgsvcw
+|kubectl get service -o wide
 
-|`keds`
-|`kubectl edit daemonset`
+|
+|kgsvcwa
+|kubectl get service --watch
 
-|`kedsl`
-|`kubectl edit daemonset -l`
+|
+|kgsvcy
+|kubectl get service -o yaml
 
-|`kdelds`
-|`kubectl delete daemonset`
+|
+|kesvc
+|kubectl edit service
 
-|`kdsa`
-|`kubectl describe serviceaccount`
+|
+|kesvcl
+|kubectl edit service -l
 
-|`kgsa`
-|`kubectl get serviceaccount`
+|
+|kdelsvc
+|kubectl delete service
 
-|`kgsal`
-|`kubectl get serviceaccount -l`
+|scale replicaset: `rs`
+|ksrs
+|kubectl scale replicaset --replicas
 
-|`kgsaw`
-|`kubectl get serviceaccount -o wide`
+|scale replicationcontroller: `rc`
+|ksrc
+|kubectl scale replicationcontroller --replicas
 
-|`kgsawa`
-|`kubectl get serviceaccount --watch`
+|scale deployment: `deploy`
+|ksdeploy
+|kubectl scale deployment --replicas
 
-|`kgsay`
-|`kubectl get serviceaccount -o yaml`
+|scale deployment: `dep`
+|ksdep
+|kubectl scale deployment --replicas
 
-|`kesa`
-|`kubectl edit serviceaccount`
+|scale statefulset: `sts`
+|kssts
+|kubectl scale statefulset --replicas
 
-|`kesal`
-|`kubectl edit serviceaccount -l`
+|rollout * replicaset: `rs`
+|krhrs
+|kubectl rollout history replicaset
 
-|`kdelsa`
-|`kubectl delete serviceaccount`
+|
+|krprs
+|kubectl rollout pause replicaset
 
-|`kdpo`
-|`kubectl describe pod`
+|
+|krrrs
+|kubectl rollout restart replicaset
 
-|`kgpo`
-|`kubectl get pod`
+|
+|krresrs
+|kubectl rollout resume replicaset
 
-|`kgpol`
-|`kubectl get pod -l`
+|
+|krsrs
+|kubectl rollout status replicaset
 
-|`kgpow`
-|`kubectl get pod -o wide`
+|
+|krurs
+|kubectl rollout undo replicaset
 
-|`kgpowa`
-|`kubectl get pod --watch`
+|rollout * replicationcontroller: `rc`
+|krhrc
+|kubectl rollout history replicationcontroller
 
-|`kgpoy`
-|`kubectl get pod -o yaml`
+|
+|krprc
+|kubectl rollout pause replicationcontroller
 
-|`kepo`
-|`kubectl edit pod`
+|
+|krrrc
+|kubectl rollout restart replicationcontroller
 
-|`kepol`
-|`kubectl edit pod -l`
+|
+|krresrc
+|kubectl rollout resume replicationcontroller
 
-|`kdelpo`
-|`kubectl delete pod`
+|
+|krsrc
+|kubectl rollout status replicationcontroller
 
-|`ksrs`
-|`kubectl scale replicaset --replicas`
+|
+|krurc
+|kubectl rollout undo replicationcontroller
 
-|`krhrs`
-|`kubectl rollout history replicaset`
+|rollout * deployment: `deploy`
+|krhdeploy
+|kubectl rollout history deployment
 
-|`krprs`
-|`kubectl rollout pause replicaset`
+|
+|krpdeploy
+|kubectl rollout pause deployment
 
-|`krrrs`
-|`kubectl rollout restart replicaset`
+|
+|krrdeploy
+|kubectl rollout restart deployment
 
-|`krresrs`
-|`kubectl rollout resume replicaset`
+|
+|krresdeploy
+|kubectl rollout resume deployment
 
-|`krsrs`
-|`kubectl rollout status replicaset`
+|
+|krsdeploy
+|kubectl rollout status deployment
 
-|`krurs`
-|`kubectl rollout undo replicaset`
+|
+|krudeploy
+|kubectl rollout undo deployment
 
-|`ksrc`
-|`kubectl scale replicationcontroller --replicas`
+|rollout * deployment: `dep`
+|krhdep
+|kubectl rollout history deployment
 
-|`krhrc`
-|`kubectl rollout history replicationcontroller`
+|
+|krpdep
+|kubectl rollout pause deployment
 
-|`krprc`
-|`kubectl rollout pause replicationcontroller`
+|
+|krrdep
+|kubectl rollout restart deployment
 
-|`krrrc`
-|`kubectl rollout restart replicationcontroller`
+|
+|krresdep
+|kubectl rollout resume deployment
 
-|`krresrc`
-|`kubectl rollout resume replicationcontroller`
+|
+|krsdep
+|kubectl rollout status deployment
 
-|`krsrc`
-|`kubectl rollout status replicationcontroller`
+|
+|krudep
+|kubectl rollout undo deployment
 
-|`krurc`
-|`kubectl rollout undo replicationcontroller`
+|rollout * statefulset: `sts`
+|krhsts
+|kubectl rollout history statefulset
 
-|`ksdeploy`
-|`kubectl scale deployment --replicas`
+|
+|krpsts
+|kubectl rollout pause statefulset
 
-|`krhdeploy`
-|`kubectl rollout history deployment`
+|
+|krrsts
+|kubectl rollout restart statefulset
 
-|`krpdeploy`
-|`kubectl rollout pause deployment`
+|
+|krressts
+|kubectl rollout resume statefulset
 
-|`krrdeploy`
-|`kubectl rollout restart deployment`
+|
+|krssts
+|kubectl rollout status statefulset
 
-|`krresdeploy`
-|`kubectl rollout resume deployment`
-
-|`krsdeploy`
-|`kubectl rollout status deployment`
-
-|`krudeploy`
-|`kubectl rollout undo deployment`
-
-|`ksdep`
-|`kubectl scale deployment --replicas`
-
-|`krhdep`
-|`kubectl rollout history deployment`
-
-|`krpdep`
-|`kubectl rollout pause deployment`
-
-|`krrdep`
-|`kubectl rollout restart deployment`
-
-|`krresdep`
-|`kubectl rollout resume deployment`
-
-|`krsdep`
-|`kubectl rollout status deployment`
-
-|`krudep`
-|`kubectl rollout undo deployment`
-
-|`kssts`
-|`kubectl scale statefulset --replicas`
-
-|`krhsts`
-|`kubectl rollout history statefulset`
-
-|`krpsts`
-|`kubectl rollout pause statefulset`
-
-|`krrsts`
-|`kubectl rollout restart statefulset`
-
-|`krressts`
-|`kubectl rollout resume statefulset`
-
-|`krssts`
-|`kubectl rollout status statefulset`
-
-|`krusts`
-|`kubectl rollout undo statefulset`
+|
+|krusts
+|kubectl rollout undo statefulset
 
 |===
