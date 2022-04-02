@@ -315,4 +315,3 @@ Resource specific aliases are generated based on these abbreviations:
 ||`krressts`|`kubectl rollout resume statefulset`|
 ||`krssts`|`kubectl rollout status statefulset`|
 ||`krusts`|`kubectl rollout undo statefulset`|
-
