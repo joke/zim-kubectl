@@ -84,7 +84,7 @@ alias "${kprefix}tpol"='kubectl top pod -l'
 
 # describe/edit/get/delete resources
 local -A resources
-resources=([a]=all [cm]=configmap [cj]=cronjob [ds]=daemonset [dep]=deployment [deploy]=deployment [hpa]=horizontalpodautoscaler [ing]=ingress [j]=job [ns]=namespace [no]=node [pdb]=poddisruptionbudget [po]=pod [pv]=persistentvolume [pvc]=persistentvolumeclaim [rc]=replicationcontroller [rs]=replicaset [sa]=serviceaccount [sec]=secret [sts]=statefulset [svc]=service)
+resources=([a]=all [cj]=cronjob [cm]=configmap [cr]=clusterrole [crb]=clusterrolebinding [ds]=daemonset [dep]=deployment [deploy]=deployment [hpa]=horizontalpodautoscaler [ing]=ingress [j]=job [no]=node [ns]=namespace [pc]=priorityclass [pdb]=poddisruptionbudget [po]=pod [pv]=persistentvolume [pvc]=persistentvolumeclaim [rc]=replicationcontroller [rs]=replicaset [sa]=serviceaccount [sec]=secret [sts]=statefulset [svc]=service)
 for r in ${(k)resources}; do
   alias "${kprefix}d${r}"="kubectl describe ${resources[$r]}"
   alias "${kprefix}g${r}"="kubectl get ${resources[$r]}"

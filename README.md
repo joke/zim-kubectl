@@ -79,15 +79,18 @@ Resource specific aliases are generated based on these abbreviations:
 |Abbreviation|kubernetes resource|
 |--|--|
 |__a__|all|
-|__cm__|configmap|
 |__cj__|cronjob|
+|__cm__|configmap|
+|__cr__|clusterrole|
+|__crb__|clusterrolebinding|
 |__dep__|deployment|
 |__deploy__|deployment|
 |__hpa__|horizontalpodautoscaler|
 |__ing__|ingress|
 |__j__|job|
-|__ns__|namespace|
 |__no__|node|
+|__ns__|namespace|
+|__pc__|priorityclass|
 |__pdb__|poddisruptionbudget|
 |__po__|pod|
 |__pv__|persistentvolume|
@@ -101,6 +104,24 @@ Resource specific aliases are generated based on these abbreviations:
 
 |Resource Group|Alias|Command|
 |--|--|--|
+|__clusterrole: `cr`__|`kdcr`|`kubectl describe clusterrole`|
+||`kgcr`|`kubectl get clusterrole`|
+||`kgcrl`|`kubectl get clusterrole -l`|
+||`kgcrw`|`kubectl get clusterrole -o wide`|
+||`kgcrwa`|`kubectl get clusterrole --watch`|
+||`kgcry`|`kubectl get clusterrole -o yaml`|
+||`kecr`|`kubectl edit clusterrole`|
+||`kecrl`|`kubectl edit clusterrole -l`|
+||`kdelcr`|`kubectl delete clusterrole`|
+|__clusterrolebinding: `crb`__|`kdcrb`|`kubectl describe clusterrole`|
+||`kgcrb`|`kubectl get clusterrole`|
+||`kgcrbl`|`kubectl get clusterrole -l`|
+||`kgcrbw`|`kubectl get clusterrole -o wide`|
+||`kgcrbwa`|`kubectl get clusterrole --watch`|
+||`kgcrby`|`kubectl get clusterrole -o yaml`|
+||`kecrb`|`kubectl edit clusterrole`|
+||`kecrbl`|`kubectl edit clusterrole -l`|
+||`kdelcrb`|`kubectl delete clusterrole`|
 |__configmap: `cm`__|`kdcm`|`kubectl describe configmap`|
 ||`kgcm`|`kubectl get configmap`|
 ||`kgcml`|`kubectl get configmap -l`|
@@ -191,24 +212,6 @@ Resource specific aliases are generated based on these abbreviations:
 ||`keno`|`kubectl edit node`|
 ||`kenol`|`kubectl edit node -l`|
 ||`kdelno`|`kubectl delete node`|
-|__poddisruptionbudget: `pdb`__|`kdpdb`|`kubectl describe poddisruptionbudget`|
-||`kgpdb`|`kubectl get poddisruptionbudget`|
-||`kgpdbl`|`kubectl get poddisruptionbudget -l`|
-||`kgpdbw`|`kubectl get poddisruptionbudget -o wide`|
-||`kgpdbwa`|`kubectl get poddisruptionbudget --watch`|
-||`kgpdby`|`kubectl get poddisruptionbudget -o yaml`|
-||`kepdb`|`kubectl edit poddisruptionbudget`|
-||`kepdbl`|`kubectl edit poddisruptionbudget -l`|
-||`kdelpdb`|`kubectl delete poddisruptionbudget`|
-|__pod: `po`__|`kdpo`|`kubectl describe pod`|
-||`kgpo`|`kubectl get pod`|
-||`kgpol`|`kubectl get pod -l`|
-||`kgpow`|`kubectl get pod -o wide`|
-||`kgpowa`|`kubectl get pod --watch`|
-||`kgpoy`|`kubectl get pod -o yaml`|
-||`kepo`|`kubectl edit pod`|
-||`kepol`|`kubectl edit pod -l`|
-||`kdelpo`|`kubectl delete pod`|
 |__persistentvolume: `pv`__|`kdpv`|`kubectl describe persistentvolume`|
 ||`kgpv`|`kubectl get persistentvolume`|
 ||`kgpvl`|`kubectl get persistentvolume -l`|
@@ -227,6 +230,33 @@ Resource specific aliases are generated based on these abbreviations:
 ||`kepvc`|`kubectl edit persistentvolumeclaim`|
 ||`kepvcl`|`kubectl edit persistentvolumeclaim -l`|
 ||`kdelpvc`|`kubectl delete persistentvolumeclaim`|
+|__pod: `po`__|`kdpo`|`kubectl describe pod`|
+||`kgpo`|`kubectl get pod`|
+||`kgpol`|`kubectl get pod -l`|
+||`kgpow`|`kubectl get pod -o wide`|
+||`kgpowa`|`kubectl get pod --watch`|
+||`kgpoy`|`kubectl get pod -o yaml`|
+||`kepo`|`kubectl edit pod`|
+||`kepol`|`kubectl edit pod -l`|
+||`kdelpo`|`kubectl delete pod`|
+|__poddisruptionbudget: `pdb`__|`kdpdb`|`kubectl describe poddisruptionbudget`|
+||`kgpdb`|`kubectl get poddisruptionbudget`|
+||`kgpdbl`|`kubectl get poddisruptionbudget -l`|
+||`kgpdbw`|`kubectl get poddisruptionbudget -o wide`|
+||`kgpdbwa`|`kubectl get poddisruptionbudget --watch`|
+||`kgpdby`|`kubectl get poddisruptionbudget -o yaml`|
+||`kepdb`|`kubectl edit poddisruptionbudget`|
+||`kepdbl`|`kubectl edit poddisruptionbudget -l`|
+||`kdelpdb`|`kubectl delete poddisruptionbudget`|
+|__priorityclass: `pc`__|`kdpc`|`kubectl describe priorityclass`|
+||`kgpc`|`kubectl get priorityclass`|
+||`kgpcl`|`kubectl get priorityclass -l`|
+||`kgpcw`|`kubectl get priorityclass -o wide`|
+||`kgpcwa`|`kubectl get priorityclass --watch`|
+||`kgpcy`|`kubectl get priorityclass -o yaml`|
+||`kepc`|`kubectl edit priorityclass`|
+||`kepcl`|`kubectl edit priorityclass -l`|
+||`kdelpc`|`kubectl delete priorityclass`|
 |__replicationcontroller: `rc`__|`kdrc`|`kubectl describe replicationcontroller`|
 ||`kgrc`|`kubectl get replicationcontroller`|
 ||`kgrcl`|`kubectl get replicationcontroller -l`|
