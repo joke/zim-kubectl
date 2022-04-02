@@ -311,10 +311,20 @@ Resource specific aliases are generated based on these abbreviations:
 ||`kesvc`|`kubectl edit service`|
 ||`kesvcl`|`kubectl edit service -l`|
 ||`kdelsvc`|`kubectl delete service`|
-|__scale deployment: `dep`__|`ksdep`|`kubectl scale deployment --replicas`|
-|__scale deployment: `deploy`__|`ksdeploy`|`kubectl scale deployment --replicas`|
-|__scale replicationcontroller: `rc`__|`ksrc`|`kubectl scale replicationcontroller --replicas`|
-|__scale replicaset: `rs`__|`ksrs`|`kubectl scale replicaset --replicas`|
+|__scale cronjob: `cj`__|`kccj`|`kubectl create cronjob`|
+|__scale configmap: `cm`__|`kccm`|`kubectl create configmap`|
+|__scale clusterrole: `cr`__|`kccr`|`kubectl create clusterrole`|
+|__scale clusterrolebinding: `crb`__|`kccrb`|`kubectl create clusterrolebinding`|
+|__scale deployment: `dep`__|`kcdep`|`kubectl create deployment`|
+|__scale deployment: `deploy`__|`kcdep`|`kubectl create deployment`|
+|__scale ingress: `ing`__|`kcing`|`kubectl create ingress`|
+|__scale job: `j`__|`kcj`|`kubectl create job`|
+|__scale namespace: `ns`__|`kcns`|`kubectl create namespace`|
+|__scale priorityclass: `pc`__|`kcpc`|`kubectl create priorityclass`|
+|__scale poddisruptionbudget: `pdb`__|`kcpdb`|`kubectl create poddisruptionbudget`|
+|__scale serviceaccount: `sa`__|`kcsa`|`kubectl create serviceaccount`|
+|__scale secret: `sec`__|`kcsec`|`kubectl create secret`|
+|__scale service: `svc`__|`kcsvc`|`kubectl create service`|
 |__rollout * deployment: `dep`__|`krhdep`|`kubectl rollout history deployment`|
 ||`krpdep`|`kubectl rollout pause deployment`|
 ||`krrdep`|`kubectl rollout restart deployment`|
@@ -345,3 +355,7 @@ Resource specific aliases are generated based on these abbreviations:
 ||`krressts`|`kubectl rollout resume statefulset`|
 ||`krssts`|`kubectl rollout status statefulset`|
 ||`krusts`|`kubectl rollout undo statefulset`|
+|__scale deployment: `dep`__|`ksdep`|`kubectl scale deployment --replicas`|
+|__scale deployment: `deploy`__|`ksdeploy`|`kubectl scale deployment --replicas`|
+|__scale replicationcontroller: `rc`__|`ksrc`|`kubectl scale replicationcontroller --replicas`|
+|__scale replicaset: `rs`__|`ksrs`|`kubectl scale replicaset --replicas`|

@@ -111,3 +111,11 @@ for r in ${(k)resources}; do
   alias "${kprefix}ru${r}"="kubectl rollout undo ${resources[$r]}"
 done
 unset resources
+
+# create resources
+local -A resources
+resources=([cj]=cronjob [cm]=configmap [cr]=clusterrole [crb]=clusterrolebinding [dep]=deployment [deploy]=deployment [ing]=ingress [j]=job [ns]=namespace [pc]=priorityclass [pdb]=poddisruptionbudget [sa]=serviceaccount [sec]=secret [svc]=service)
+for r in ${(k)resources}; do
+  print "${kprefix}c${r}"="kubectl create ${resources[$r]}"
+done
+unset resources
