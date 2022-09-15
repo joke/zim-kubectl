@@ -1,11 +1,13 @@
-if (( ! ${+commands[kubectl]} )); then
+local command="${commands[kubectl]:-${commands[asdf]:+$(asdf which kubectl)}}"
+
+if (( ! ${+command} )); then
   return 1
 fi
 
-if [[ ! -e ${0:h}/kubectl.zsh || ${0:h}/kubectl.zsh -ot ${commands[kubectl]} ]]; then
-  ${commands[kubectl]} completion zsh >| ${0:h}/kubectl.zsh
+local compfile=${0:h}/functions/_kubectl
+if [[ ! -e $compfile || $compfile -ot $command ]]; then
+  ${command} completion zsh >| $compfile
 fi
-source ${0:h}/kubectl.zsh
 
 local kprefix
 zstyle -s ':zim:kubectl' aliases-prefix 'kprefix' || kprefix=k
