@@ -18,6 +18,11 @@ repository:
   enable_automated_security_fixes: true
   enable_vulnerability_alerts: true
 
+labels:
+- name: waiting for feedback
+  color: '#D4C5F9'
+  description: Waiting for feedback issue/pr author
+
 branches:
 - name: main
   protection:
