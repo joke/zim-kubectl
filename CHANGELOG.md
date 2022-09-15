@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.2](https://github.com/joke/zim-kubectl/compare/v1.0.1...v1.0.2) (2022-09-15)
+
+
+### Bug Fixes
+
+* improve completions ([87e1846](https://github.com/joke/zim-kubectl/commit/87e18460f8830a64efa63bab614d90890b8159be))
+
 ### [1.0.1](https://github.com/joke/zim-kubectl/compare/v1.0.0...v1.0.1) (2022-04-19)
 
 
