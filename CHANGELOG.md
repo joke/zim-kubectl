@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.3](https://github.com/joke/zim-kubectl/compare/v1.0.2...v1.0.3) (2022-09-16)
+
+
+### Bug Fixes
+
+* asdf handling ([51aa6fb](https://github.com/joke/zim-kubectl/commit/51aa6fbd6a0beeca39b5810a12ed475952bd9fd1))
+
 ### [1.0.2](https://github.com/joke/zim-kubectl/compare/v1.0.1...v1.0.2) (2022-09-15)
 
 
