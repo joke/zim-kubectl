@@ -2,6 +2,11 @@
 
 [zim module](https://github.com/zimfw/zimfw) for [kubectl](https://kubernetes.io/docs/reference/kubectl/kubectl/).
 
+## Features
+
+* Completion
+* Aliases
+
 ## Settings
 
 You can customize the default prefix by adding a `zstyle` to your `~/.zshrc` before this module is initialized.
