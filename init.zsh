@@ -118,4 +118,7 @@
   for r in ${(k)resources}; do
     alias "${kprefix}c${r}"="kubectl create ${resources[$r]}"
   done
+
+  # misc
+  alias "${kprefix}?=kubectl-alias-lookup $1"
 } ${0:h}

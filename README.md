@@ -17,6 +17,36 @@ zstyle ':zim:kubectl' aliases-prefix 'K'
 
 ## Aliases
 
+### Search for aliases
+
+You can search for aliases by using
+
+```
+k? <snippet>
+```
+
+Be aware that `k` is mapped to your selected prefix.
+
+Example:
+```bash
+k? get pod
+kghpa    kubectl get horizontalpodautoscaler
+kghpal   kubectl get horizontalpodautoscaler -l
+kghpaw   kubectl get horizontalpodautoscaler -o wide
+kghpawa  kubectl get horizontalpodautoscaler --watch
+kghpay   kubectl get horizontalpodautoscaler -o yaml
+kgpo     kubectl get pod
+kgpol    kubectl get pod -l
+kgpow    kubectl get pod -o wide
+kgpowa   kubectl get pod --watch
+kgpoy    kubectl get pod -o yaml
+kgpdb    kubectl get poddisruptionbudget
+kgpdbl   kubectl get poddisruptionbudget -l
+kgpdbw   kubectl get poddisruptionbudget -o wide
+kgpdbwa  kubectl get poddisruptionbudget --watch
+kgpdby   kubectl get poddisruptionbudget -o yaml
+```
+
 ### Command specific aliases (e.g. `get`, `edit`)
 
 |Command Group|Alias|Command|
