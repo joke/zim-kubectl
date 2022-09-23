@@ -1,0 +1,22 @@
+#!/bin/zsh
+if (( # < 1 )); then
+  print -u2 "usage: ${0} <path to kubectl module> [pattern...]"
+  return 2
+fi
+
+local kprefix
+zstyle -s ':zim:kubectl' aliases-prefix 'kprefix' || kprefix=k
+
+local kline kalias
+local -r kmodule_home=${1}
+shift
+local -r kpattern=${(j:.*:)@}
+# read one-line documentations from README.md
+while IFS= read -r kline; do
+  if [[ ${kline} =~ '^\|\|`k(.*)`\|`(.*)`\|$' ]]; then
+    # echo ${kline}
+    kalias=${kprefix}${match[1]}
+    kline=${kalias}$'\t'${aliases[${kalias}]}
+    if [[ -z ${kpattern} || ${kline} =~ ${kpattern} ]] print -R ${kline}
+  fi
+done < ${kmodule_home}/README.md | command column -s $'\t' -t
