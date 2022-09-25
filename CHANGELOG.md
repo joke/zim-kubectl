@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/joke/zim-kubectl/compare/v1.1.0...v1.2.0) (2022-09-25)
+
+
+### Features
+
+* Added alias lookup ([c2f6d67](https://github.com/joke/zim-kubectl/commit/c2f6d671fbc37a845ab3fb099a86ba8b78a67924))
+
 ## [1.1.0](https://github.com/joke/zim-kubectl/compare/v1.0.3...v1.1.0) (2022-09-17)
 
 
