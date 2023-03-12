@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/joke/zim-kubectl/compare/v1.2.0...v1.2.1) (2023-03-12)
+
+
+### Bug Fixes
+
+* new version detection message ([9fe69ad](https://github.com/joke/zim-kubectl/commit/9fe69ad96e8e86e322dc7f9af7dd29d48209090b))
+
 ## [1.2.0](https://github.com/joke/zim-kubectl/compare/v1.1.0...v1.2.0) (2022-09-25)
 
 
